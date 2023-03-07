@@ -93,7 +93,7 @@ const technologies = [
     icon: nodejs,
   },
   {
-    name: "MongoDB",
+    name: "SCSS",
     icon: mongodb,
   },
   {
@@ -109,7 +109,7 @@ const technologies = [
     icon: figma,
   },
   {
-    name: "docker",
+    name: "Next.js",
     icon: docker,
   },
 ];
