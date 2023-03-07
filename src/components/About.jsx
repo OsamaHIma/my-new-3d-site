@@ -14,6 +14,7 @@ const About = () => {
         glareEnable={true}
         glareBorderRadius="20px"
         glareColor="#f0f0f0"
+        gyroscope={true}
       >
         <motion.div
           variants={fadeIn("right", "spring", 0.5 * index, 0.75)}
