@@ -1,16 +1,39 @@
 import React, { Suspense, useEffect, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
-
 import CanvasLoader from "../Loader";
-
+import * as THREE from "three";
+import url from "/fiber.mp4";
 const Computers = ({ isMobile }) => {
   const computer = useGLTF("./desktop_pc/scene.gltf");
+  const screen =
+    computer.scene.children[0].children[0].children[0].children[142]
+      .children[0];
+
+  const [video] = useState(() => {
+    const vid = document.createElement("video");
+    vid.src = url;
+    vid.loop = true;
+    vid.muted = true;
+    vid.autoplay = true;
+    vid.playsInline = true;
+    vid.play();
+    return vid;
+  });
+
+  const VideoToView = new THREE.VideoTexture(video);
+  VideoToView.minFilter = THREE.NearestFilter;
+  VideoToView.magFilter = THREE.NearestFilter;
+  VideoToView.generateMipmaps = false;
+  VideoToView.encoding = THREE.sRGBEncoding;
+
+  screen.material = new THREE.MeshBasicMaterial({
+    map: VideoToView,
+  });
 
   return (
     <mesh>
-      <hemisphereLight intensity={0.15}
-       groundColor="black" />
+      <hemisphereLight intensity={0.15} groundColor="black" />
       <spotLight
         position={[-20, 50, 10]}
         angle={0.12}

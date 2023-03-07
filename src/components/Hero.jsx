@@ -12,18 +12,19 @@ const Hero = () => {
         <div className="flex flex-col justify-center items-center mt-5">
           <div className="w-5 h-5 rounded-full bg-[#915eff]" />
           <div className="w-1 sm:h-80 h-40 violet-gradient" />
-          <div className="">
-            <h1 className={`${styles.heroHeadText} text-white`}>
-              Hi, I'm <span className="text-[#915eff]">Osama</span>
-            </h1>
-            <p className={`${styles.heroSubText} text-white-100 mt-2`}>
-              I'm a Front-end developer
-            </p>
-          </div>
+        </div>
+
+        <div>
+          <h1 className={`${styles.heroHeadText} text-white`}>
+            Hi, I'm <span className="text-[#915eff]">Osama</span>
+          </h1>
+          <p className={`${styles.heroSubText} text-white-100 mt-2`}>
+            I'm a Front-end developer
+          </p>
         </div>
       </div>
 
-      {/* <ComputersCanvas /> */}
+      <ComputersCanvas />
 
       <div className="absolute flex justify-center w-full xs:bottom-10 bottom-32 items-center">
         <a href="#about">
