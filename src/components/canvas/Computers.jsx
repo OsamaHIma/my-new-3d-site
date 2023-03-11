@@ -3,7 +3,8 @@ import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 import CanvasLoader from "../Loader";
 import * as THREE from "three";
-import url from "/fiber.mp4";
+import { work_video } from "../../assets";
+import { toast } from "react-toastify";
 const Computers = ({ isMobile }) => {
   const computer = useGLTF("./desktop_pc/scene.gltf");
   const screen =
@@ -12,12 +13,23 @@ const Computers = ({ isMobile }) => {
 
   const [video] = useState(() => {
     const vid = document.createElement("video");
-    vid.src = url;
+    vid.src = work_video;
     vid.loop = true;
     vid.muted = true;
     vid.autoplay = true;
     vid.playsInline = true;
-    vid.play();
+    const playPromise = vid.play();
+
+    if (playPromise !== undefined) {
+      playPromise.then(_ => {
+        // Automatic playback started!
+        // Show playing UI.
+        console.log("loading...");
+      })
+      .catch(error => {
+        toast.error(`Something went wrong while loading the video error: ${error}`);
+      });
+    }
     return vid;
   });
 

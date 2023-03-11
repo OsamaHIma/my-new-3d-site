@@ -80,7 +80,7 @@ const Contact = () => {
         <p className={`${styles.sectionSubText}`}>Get in touch</p>
         <h3 className={`${styles.sectionHeadText}`}>Contact.</h3>
         <form
-          encType="multipart/form-data"
+          ref={formRef}
           className="flex flex-col gap-8 mt-12"
           onSubmit={handelSubmit}
         >
@@ -90,6 +90,7 @@ const Contact = () => {
               type="text"
               name="name"
               required
+              minLength={4}
               onChange={handelChange}
               placeholder="relax and try to remember"
               className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
@@ -113,6 +114,7 @@ const Contact = () => {
               name="message"
               required
               onChange={handelChange}
+              minLength={6}
               placeholder="Finally What do you wanna say?"
               className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
             />
