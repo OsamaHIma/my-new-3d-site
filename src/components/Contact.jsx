@@ -42,21 +42,27 @@ const Contact = () => {
           setLoading(false);
           toast.success(
             <p>
-              Thank you <span className="text-[#52ee4d] font-extrabold">{Form.name}</span>!, 
-             I've got your message and I'll reach out to you soon.
+              Thank you{" "}
+              <span className="text-[#52ee4d] font-extrabold">{Form.name}</span>
+              !, I've got your message and I'll reach out to you soon.
             </p>,
             {
               position: "top-right",
-              autoClose: 5000,
+              autoClose: 5700,
             }
           );
           setForm({ name: "", email: "", message: "" });
+          document
+            .querySelectorAll("input")
+            .forEach((input) => (input.value = ""));
+          document.querySelector("textarea").value = "";
         },
         (err) => {
           setLoading(false);
           toast.error(
             <p>
-              Sorry <span className="text-[#ee524d] font-extrabold">{Form.name}</span>{" "}
+              Sorry{" "}
+              <span className="text-[#ee524d] font-extrabold">{Form.name}</span>{" "}
               something went wrong.
             </p>
           );

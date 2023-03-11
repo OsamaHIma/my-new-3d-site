@@ -3,7 +3,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+:root {
+  --toastify-color-dark: #231c4e !important;
 
+}
 * {
   margin: 0;
   padding: 0;
