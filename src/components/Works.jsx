@@ -24,7 +24,7 @@ const Works = () => {
         glareBorderRadius="16px"
         glareColor="#4d58eea8"
         tiltAxis="x"
-        gyroscope={true}
+        
         className="rounded-2xl bg-tertiary p-5 sm:w-[360px] w-full "
       >
         <div className="relative w-full h-[230px] ">
