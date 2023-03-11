@@ -15,7 +15,7 @@ const Experience = () => {
     <VerticalTimelineElement
       contentStyle={{ background: "#1d1836", color: "#fff" }}
       contentArrowStyle={{ borderRight: "7px solid #232631" }}
-      date={experience.date}
+      // date={experience.date}
       iconStyle={{ background: experience.iconBg }}
       icon={
         <div className="flex justify-center items-center w-full h-full">
@@ -37,20 +37,29 @@ const Experience = () => {
           {experience.company_name}
         </p>
       </div>
-      <ul className="list-disc mt-5 ml-5 space-y-2">
+      {/* <ul className="list-disc mt-5 ml-5 space-y-2">
         {experience.points.map((point, index) => (
           <li key={index} className="text-white-100 text-[14px] tracking-wider pl-1">
             {point}
           </li>
         ))}
-      </ul>
+      </ul> */}
+      <div className="mt-5 ml-5 space-y-2">
+        <a href={experience.certification_link} target="_blank">
+          <img
+            src={experience.img}
+            alt="certification"
+            className="object-contain rounded-xl"
+          />
+        </a>
+      </div>
     </VerticalTimelineElement>
   );
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={`${styles.sectionSubText}`}>What I have done so far</p>
-        <h2 className={`${styles.sectionHeadText}`}>Work experience.</h2>
+        <p className={`${styles.sectionSubText}`}>What I have learned so far</p>
+        <h2 className={`${styles.sectionHeadText}`}>My Certifications.</h2>
       </motion.div>
       <div className="flex flex-col mt-20">
         <VerticalTimeline>
@@ -63,4 +72,4 @@ const Experience = () => {
   );
 };
 
-export default SectionWrapper(Experience, "work");
+export default SectionWrapper(Experience, "");

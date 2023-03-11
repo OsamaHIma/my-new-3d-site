@@ -3,7 +3,7 @@ import React from "react";
 import { SectionWrapper } from "../hoc";
 import { styles } from "../styles";
 import { projects } from "../constants";
-import { github } from "../assets";
+import { github, link } from "../assets";
 import { fadeIn, textVariant } from "../utils/motion";
 import Tilt from "react-parallax-tilt";
 
@@ -11,22 +11,68 @@ const Works = () => {
   const ProjectCard = ({
     index,
     name,
-    desecration,
+    description,
     image,
     tags,
     source_code_link,
+    live_preview,
   }) => (
-    <motion.div variants={fadeIn("up", "spring", 0.5 * index, 0.75)}>
+    <motion.div variants={fadeIn("up", "spring", 0.3 * index, 0.75)}>
       <Tilt
         scale={1}
         glareEnable={true}
         glareBorderRadius="16px"
-        glareColor="#f0f0f0"
+        glareColor="#4d58eea8"
         tiltAxis="x"
         gyroscope={true}
         className="rounded-2xl bg-tertiary p-5 sm:w-[360px] w-full "
       >
-        <div className="relative w-full h-[230px] "></div>
+        <div className="relative w-full h-[230px] ">
+          <img
+            src={image}
+            alt={name}
+            className="w-full h-full object-cover rounded-2xl"
+          />
+          <div className="absolute inset-0 flex justify-between m-3 card-img_hover">
+            <div
+              className="black-gradient w-10 h-10 cursor-pointer rounded-full flex justify-center items-center"
+              onClick={() => {
+                window.open(source_code_link, "_blank");
+              }}
+            >
+              <img
+                src={github}
+                alt="github"
+                className="h-1/2 w-1/2 object-contain"
+              />
+            </div>
+            <div
+              className="black-gradient w-10 h-10 cursor-pointer rounded-full flex justify-center items-center"
+              onClick={() => {
+                window.open(live_preview, "_blank");
+              }}
+            >
+              <img
+                src={link}
+                alt="link"
+                className="h-1/2 w-1/2 object-contain"
+              />
+            </div>
+          </div>
+        </div>
+        <div className="mt-5">
+          <h3 className="text-[24px] text-white font-bold">{name}</h3>
+          <p className="text-secondary mt-2 text-[14px]">
+            {description ? description : null}
+          </p>
+        </div>
+        <div className="mt-4 flex flex-wrap gap-2">
+          {tags.map((tag, index) => (
+            <p key={index} className={`text-[14px] ${tag.color} leading-6 `}>
+              #{tag.name}
+            </p>
+          ))}
+        </div>
       </Tilt>
     </motion.div>
   );
@@ -45,7 +91,7 @@ const Works = () => {
           real-world examples of my work. Each project is briefly described with
           links to code repositories and live demos in it. It reflects my
           ability to solve complex problems, work with different technologies,
-          and manage projects effectively.
+          and manage projects effectively, for more projects please checkout my GitHub profile.
         </motion.p>
       </div>
       <div className="mt-20 flex flex-wrap gap-7">
@@ -57,4 +103,4 @@ const Works = () => {
   );
 };
 
-export default SectionWrapper(Works, "work");
+export default SectionWrapper(Works, "projects");

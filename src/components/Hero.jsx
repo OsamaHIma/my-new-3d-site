@@ -5,7 +5,7 @@ import { ComputersCanvas } from "./canvas";
 
 const Hero = () => {
   return (
-    <section className={`relative w-full h-screen mx-auto`}>
+    <header className={`relative w-full h-screen mx-auto`}>
       <div
         className={`${styles.paddingX} absolute inset-0 top-[120px] max-w-7xl mx-auto flex flex-row items-start gap-5 `}
       >
@@ -16,7 +16,7 @@ const Hero = () => {
 
         <div>
           <h1 className={`${styles.heroHeadText} text-white`}>
-            Hi, I'm <span className="text-[#915eff]">Osama</span>
+            Hi!, I'm <span className="text-[#915eff]">Osama</span>
           </h1>
           <p className={`${styles.heroSubText} text-white-100 mt-2`}>
             I'm a Front-end developer
@@ -43,7 +43,7 @@ const Hero = () => {
           </div>
         </a>
       </div>
-    </section>
+    </header>
   );
 };
 

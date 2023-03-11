@@ -13,7 +13,7 @@ const About = () => {
         className="xs:w-[250px] w-full transition-all"
         glareEnable={true}
         glareBorderRadius="20px"
-        glareColor="#f0f0f0"
+        glareColor="#4dee90"
         gyroscope={true}
       >
         <motion.div
@@ -40,7 +40,7 @@ const About = () => {
         I'm a skilled Front-end developer with experience in JavaScript and
         expertise in frameworks like React.js, Next,js
       </motion.p>
-      <div className="flex justify-center flex-wrap gap-10 mt-20 mx-auto">
+      <div className="flex justify-evenly flex-wrap gap-10 mt-20 mx-auto">
         {services.map((service, index) => (
           <ServiceCard key={service.title} index={index} {...service} />
         ))}
