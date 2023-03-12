@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import React from "react";
+import React, { Suspense } from "react";
 import { SectionWrapper } from "../hoc";
 import { styles } from "../styles";
 import { projects } from "../constants";
@@ -24,7 +24,6 @@ const Works = () => {
         glareBorderRadius="16px"
         glareColor="#4d58eea8"
         tiltAxis="x"
-        
         className="rounded-2xl bg-tertiary p-5 sm:w-[360px] w-full "
       >
         <div className="relative w-full h-[230px] ">
@@ -81,6 +80,7 @@ const Works = () => {
       <motion.div variants={textVariant()}>
         <p className={`${styles.sectionSubText}`}>My work</p>
         <h2 className={`${styles.sectionHeadText}`}>Projects done.</h2>
+          
       </motion.div>
       <div className="w-full flex">
         <motion.p
@@ -91,7 +91,8 @@ const Works = () => {
           real-world examples of my work. Each project is briefly described with
           links to code repositories and live demos in it. It reflects my
           ability to solve complex problems, work with different technologies,
-          and manage projects effectively, for more projects please checkout my GitHub profile.
+          and manage projects effectively, for more projects please checkout my
+          GitHub profile.
         </motion.p>
       </div>
       <div className="mt-20 flex justify-center flex-wrap gap-7">

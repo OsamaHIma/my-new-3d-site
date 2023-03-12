@@ -3,7 +3,6 @@ import {
   About,
   Contact,
   Experience,
-  Feedbacks,
   Hero,
   Navbar,
   Tech,
@@ -11,6 +10,8 @@ import {
   StarsCanvas,
 } from "./components";
 import { ToastContainer } from "react-toastify";
+import Spline from "@splinetool/react-spline";
+
 const App = () => {
   return (
     <BrowserRouter>
@@ -32,9 +33,14 @@ const App = () => {
           <About />
           <Experience />
           <Tech />
+
+          <Spline
+            scene="https://prod.spline.design/Yv5z0fR1xvk-I7sa/scene.splinecode"
+            className=" transform scale-[0.5] w-full -translate-x-40 md:scale-[0.7] lg:transform-none"
+          />
+
           <Works />
         </main>
-        {/* <Feedbacks /> */}
         <div className="relative z-0">
           <Contact />
           <StarsCanvas />

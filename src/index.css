@@ -34,7 +34,9 @@
 ::-webkit-scrollbar-thumb:hover {
   background-color: #804dee;
 }
-
+body {
+  overflow-x: hidden;
+}
 .active {
   border-bottom: 4px solid #504199;
   /* border-radius: 7px; */
