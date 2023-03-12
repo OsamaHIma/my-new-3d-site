@@ -10,8 +10,7 @@ import {
   StarsCanvas,
 } from "./components";
 import { ToastContainer } from "react-toastify";
-import Spline from "@splinetool/react-spline";
-
+import { SplineCanvas } from "./components/canvas";
 const App = () => {
   return (
     <BrowserRouter>
@@ -22,7 +21,6 @@ const App = () => {
           pauseOnFocusLoss
           draggable
           pauseOnHover
-          // autoClose={false}
           theme="dark"
         />
         <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
@@ -34,10 +32,7 @@ const App = () => {
           <Experience />
           <Tech />
 
-          <Spline
-            scene="https://prod.spline.design/Yv5z0fR1xvk-I7sa/scene.splinecode"
-            className=" transform scale-[0.5] -translate-x-40 md:scale-[0.7] lg:transform-none"
-          />
+          <SplineCanvas />
 
           <Works />
         </main>

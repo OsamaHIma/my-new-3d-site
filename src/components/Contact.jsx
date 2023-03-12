@@ -1,9 +1,9 @@
 import React, { useState, useRef } from "react";
 import { styles } from "../styles";
-import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 import { EarthCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
+import { motion } from "framer-motion";
 import { slideIn } from "../utils/motion";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
