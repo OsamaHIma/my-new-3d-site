@@ -109,7 +109,7 @@ const Contact = () => {
               name="email"
               required
               onChange={handelChange}
-              placeholder="Whats's your email? Hard one isn't it?"
+              placeholder="Whats's your email?"
               className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
             />
           </label>

@@ -36,7 +36,7 @@ const App = () => {
 
           <Spline
             scene="https://prod.spline.design/Yv5z0fR1xvk-I7sa/scene.splinecode"
-            className=" transform scale-[0.5] w-full -translate-x-40 md:scale-[0.7] lg:transform-none"
+            className=" transform scale-[0.5] -translate-x-40 md:scale-[0.7] lg:transform-none"
           />
 
           <Works />
