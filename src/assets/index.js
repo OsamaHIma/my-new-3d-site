@@ -30,7 +30,7 @@ import product from "./product.png";
 import youtubey from "./youtubey.png";
 import tarkez from "./tarkez.png";
 import my_portfolio from "./my portfolio.png";
-import work_video from "./fiber.mp4";
+import work_video from "./my work.mp4";
 
 import JS_certification from "./JS certification.jpg";
 import udacity_certification from "./udacity certification.png";
