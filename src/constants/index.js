@@ -19,7 +19,7 @@ import {
   product,
   dashboard,
   youtubey,
-  fiber,
+  crwnStore,
   tarkez,
   my_portfolio,
   threejs,
@@ -40,10 +40,6 @@ export const navLinks = [
     id: "contact",
     title: "Contact",
   },
-  // {
-  //   id: "https://drive.google.com/file/d/1NM5cC8ku8zc40qAGfwXBb757xQmBLRxI/view?usp=share_link",
-  //   title:"Get My CV"
-  // }
 ];
 
 const services = [
@@ -149,6 +145,27 @@ const experiences = [
 
 const projects = [
   {
+    name: "Crown Store",
+    description: "A next.js 13 e-commerce website with dynamic data from sanity and payment using stripe",
+    tags: [
+      {
+        name: "Next.js",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Stripe",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Sanity",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: crwnStore,
+    source_code_link: "https://github.com/OsamaHIma/ecommerce-next13",
+    live_preview: "https://crown-store-next13.vercel.app/"
+  },
+  {
     name: "Metaversus",
     description: "A modern next.js 13 landing page with some nice animations using framer motion and Tailwindcss.",
     tags: [
@@ -211,28 +228,6 @@ const projects = [
     image: my_portfolio,
     source_code_link: "https://github.com/OsamaHIma/my-3D-portfolio/",
     live_preview: "https://osama3dportfolio.vercel.app/"
-  },
-  {
-    name: "Fiber",
-    description:
-      "Landing page built with Using the basics languages of front-end development.",
-    tags: [
-      {
-        name: "Html",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "Bootstrap",
-        color: "green-text-gradient",
-      },
-      {
-        name: "SCSS",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: fiber,
-    source_code_link: "https://github.com/OsamaHIma/Fiber",
-    live_preview: "http://fiber-com.netlify.app/"
   },
   {
     name: "Tarkez",

@@ -23,7 +23,7 @@ import threejs from "./tech/threejs.svg";
 
 import metaversus from "./metaversus.png";
 import dashboard from "./dashboard.png";
-import fiber from "./fiber.png";
+import crwnStore from "./crwn store.png";
 import agency from "./agency.png";
 import arabi from "./arabi.png";
 import product from "./product.png";
@@ -62,7 +62,7 @@ export {
   product,
   dashboard,
   youtubey,
-  fiber,
+  crwnStore,
   tarkez,
   my_portfolio,
   link,
