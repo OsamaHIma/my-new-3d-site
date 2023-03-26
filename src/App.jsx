@@ -32,7 +32,7 @@ const App = () => {
           <Experience />
           <Tech />
 
-          <SplineCanvas />
+          {/* <SplineCanvas /> */}
 
           <Works />
         </main>
