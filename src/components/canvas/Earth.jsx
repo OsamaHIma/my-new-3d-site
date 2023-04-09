@@ -23,6 +23,7 @@ const EarthCanvas = () => {
       dpr={[1, 2]}
       camera={{ position: [-4, 3, 6], fov: 45, near: 0.1, far: 300 }}
       gl={{ preserveDrawingBuffer: true }}
+      className="cursor-grab active:cursor-grabbing"
     >
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls
