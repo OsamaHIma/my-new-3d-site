@@ -24,8 +24,6 @@ import threejs from "./tech/threejs.svg";
 import metaversus from "./metaversus.png";
 import dashboard from "./dashboard.png";
 import crwnStore from "./crwn store.png";
-import agency from "./agency.png";
-import arabi from "./arabi.png";
 import product from "./product.png";
 import youtubey from "./youtubey.png";
 import tarkez from "./tarkez.png";
@@ -34,6 +32,7 @@ import work_video from "./my work.mp4";
 
 import JS_certification from "./JS certification.jpg";
 import udacity_certification from "./udacity certification.png";
+import React_certification from "./React Certification.jpg";
 
 export {
   logo,
@@ -57,8 +56,6 @@ export {
   typescript,
   threejs,
   metaversus,
-  agency,
-  arabi,
   product,
   dashboard,
   youtubey,
@@ -68,5 +65,5 @@ export {
   link,
   work_video,
   JS_certification,
-  udacity_certification
+  udacity_certification,React_certification
 };

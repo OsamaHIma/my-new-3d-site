@@ -10,13 +10,9 @@ import {
   reactjs,
   redux,
   tailwind,
-  nodejs,
   git,
   figma,
   metaversus,
-  agency,
-  arabi,
-  product,
   dashboard,
   youtubey,
   crwnStore,
@@ -24,7 +20,7 @@ import {
   my_portfolio,
   threejs,
   JS_certification,
-  udacity_certification
+  udacity_certification,React_certification
 } from "../assets";
 
 export const navLinks = [
@@ -132,7 +128,8 @@ const experiences = [
     icon: reactjs,
     iconBg: "#383E56",
     date: " 2022 -  2023",
-    img: JS_certification,
+    img: React_certification,
+    certification_link:"https://www.udemy.com/certificate/UC-08a4dda0-2560-40f8-9541-e7602dcdc4a6/",
 
     points: [
       "Developing and maintaining web applications using React.js and other related technologies.",
