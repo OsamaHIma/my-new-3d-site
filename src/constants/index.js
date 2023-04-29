@@ -17,10 +17,12 @@ import {
   youtubey,
   crwnStore,
   tarkez,
+  safirni,
+  threeJsWeb,
   my_portfolio,
   threejs,
   JS_certification,
-  udacity_certification,React_certification
+  udacity_certification,React_certification, hasoub_certification
 } from "../assets";
 
 export const navLinks = [
@@ -50,6 +52,47 @@ const services = [
   {
     title: "Next.js Developer",
     icon: backend,
+  },
+];
+
+const experiences = [
+  {
+    title: "Html & CSS",
+    icon: html,
+    iconBg: "#383E56",
+    date: "7-2021 -  2021",
+    img: udacity_certification,
+    certification_link: "https://graduation.udacity.com/confirm/GUFTCZJD",
+    points: [
+      "Developing and maintaining web applications using React.js and other related technologies.",
+      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
+      "Implementing responsive design and ensuring cross-browser compatibility.",
+      "Participating in code reviews and providing constructive feedback to other developers.",
+    ],
+  },
+  {
+    title: "JavaScript",
+    icon: javascript,
+    iconBg: "#E6DEDD",
+    date: "2021 -  2022",
+    img: JS_certification,
+    certification_link: "https://www.udemy.com/certificate/UC-f55c74b0-92d4-492c-b0e9-5bfac8908752/"
+  },
+  {
+    title: "React.js",
+    icon: reactjs,
+    iconBg: "#383E56",
+    date: " 2022 -  2023",
+    img: React_certification,
+    certification_link:"https://www.udemy.com/certificate/UC-08a4dda0-2560-40f8-9541-e7602dcdc4a6/",
+  },
+  {
+    title: "Front-end course",
+    icon: html,
+    iconBg: "#383E56",
+    date: " 2022 -  2023",
+    img: hasoub_certification,
+    certification_link:"https://academy.hsoub.com/certificate/EGJEA4XCERP1JUF76BMV8VPR.pdf",
   },
 ];
 
@@ -97,46 +140,6 @@ const technologies = [
   {
     name: "figma",
     icon: figma,
-  },
-];
-
-const experiences = [
-  {
-    title: "Html & CSS",
-    icon: html,
-    iconBg: "#383E56",
-    date: "7-2021 -  2021",
-    img: udacity_certification,
-    certification_link: "https://graduation.udacity.com/confirm/GUFTCZJD",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-  {
-    title: "JavaScript",
-    icon: javascript,
-    iconBg: "#E6DEDD",
-    date: "2021 -  2022",
-    img: JS_certification,
-    certification_link: "https://www.udemy.com/certificate/UC-f55c74b0-92d4-492c-b0e9-5bfac8908752/"
-  },
-  {
-    title: "React.js",
-    icon: reactjs,
-    iconBg: "#383E56",
-    date: " 2022 -  2023",
-    img: React_certification,
-    certification_link:"https://www.udemy.com/certificate/UC-08a4dda0-2560-40f8-9541-e7602dcdc4a6/",
-
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
   },
 ];
 
@@ -225,6 +228,48 @@ const projects = [
     image: my_portfolio,
     source_code_link: "https://github.com/OsamaHIma/my-3D-portfolio/",
     live_preview: "https://osama3dportfolio.vercel.app/"
+  },
+  {
+    name: "Safirni",
+    description: "A next.js 13 website for tourism with full login and signup functionality",
+    tags: [
+      {
+        name: "Next.js",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Firebase",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Tailwindcss",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: safirni,
+    source_code_link: "https://github.com/OsamaHIma/safirni",
+    live_preview: "https://safirni.vercel.app/"
+  },
+  {
+    name: "3D Shirt",
+    description: "Customize your own shirt using 3D change the colors and upload your images",
+    tags: [
+      {
+        name: "React.js",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Three.js",
+        color: "green-text-gradient",
+      },
+      {
+        name: "React-three-fiber",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: threeJsWeb,
+    source_code_link: "https://github.com/OsamaHIma/safirni",
+    live_preview: "https://3d-shirt-osamahima.vercel.app/"
   },
   {
     name: "Tarkez",

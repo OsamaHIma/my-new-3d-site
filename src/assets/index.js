@@ -27,10 +27,13 @@ import crwnStore from "./crwn store.png";
 import product from "./product.png";
 import youtubey from "./youtubey.png";
 import tarkez from "./tarkez.png";
+import safirni from "./safirni.png";
+import threeJsWeb from "./three.js web.png";
 import my_portfolio from "./my portfolio.png";
 import work_video from "./my work.mp4";
 
 import JS_certification from "./JS certification.jpg";
+import hasoub_certification from "./hasoub certification.png";
 import udacity_certification from "./udacity certification.png";
 import React_certification from "./React Certification.jpg";
 
@@ -61,9 +64,12 @@ export {
   youtubey,
   crwnStore,
   tarkez,
+  safirni, 
+  threeJsWeb,
   my_portfolio,
   link,
   work_video,
   JS_certification,
+  hasoub_certification,
   udacity_certification,React_certification
 };
