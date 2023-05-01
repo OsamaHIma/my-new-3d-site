@@ -21,14 +21,17 @@ const Computers = ({ isMobile }) => {
     const playPromise = vid.play();
 
     if (playPromise !== undefined) {
-      playPromise.then(_ => {
-        // Automatic playback started!
-        // Show playing UI.
-        console.log("loading...");
-      })
-      .catch(error => {
-        toast.error(`Something went wrong while loading the video error: ${error}`);
-      });
+      playPromise
+        .then((_) => {
+          // Automatic playback started!
+          // Show playing UI.
+          console.log("loading...");
+        })
+        .catch((error) => {
+          toast.error(
+            `Something went wrong while loading the video error: ${error}`
+          );
+        });
     }
     return vid;
   });
@@ -87,6 +90,7 @@ const ComputersCanvas = () => {
       camera={{ position: [20, 3, 5], fov: 25 }}
       gl={{ preserveDrawingBuffer: true }}
       className="cursor-grab active:cursor-grabbing"
+      style={{ translateY: `${window.scrollY}px`, position: "absolute" }}
     >
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls

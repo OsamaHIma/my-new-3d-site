@@ -18,6 +18,7 @@ import {
   crwnStore,
   tarkez,
   safirni,
+  real_estate,
   threeJsWeb,
   my_portfolio,
   threejs,
@@ -231,6 +232,27 @@ const projects = [
   },
   {
     name: "Safirni",
+    description: "A next.js 13 website for Real estate",
+    tags: [
+      {
+        name: "Next.js",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Framer motion",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Tailwindcss",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: real_estate,
+    source_code_link: "https://github.com/OsamaHIma/RealEstate",
+    live_preview: "https://real-estate-next13.vercel.app/"
+  },
+  {
+    name: "Safirni",
     description: "A next.js 13 website for tourism with full login and signup functionality",
     tags: [
       {
@@ -268,7 +290,7 @@ const projects = [
       },
     ],
     image: threeJsWeb,
-    source_code_link: "https://github.com/OsamaHIma/safirni",
+    source_code_link: "https://github.com/OsamaHIma/ThreeJs-Shirt",
     live_preview: "https://3d-shirt-osamahima.vercel.app/"
   },
   {

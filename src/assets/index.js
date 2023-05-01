@@ -28,6 +28,7 @@ import product from "./product.png";
 import youtubey from "./youtubey.png";
 import tarkez from "./tarkez.png";
 import safirni from "./safirni.png";
+import real_estate from "./real-estate.png";
 import threeJsWeb from "./three.js web.png";
 import my_portfolio from "./my portfolio.png";
 import work_video from "./my work.mp4";
@@ -64,12 +65,14 @@ export {
   youtubey,
   crwnStore,
   tarkez,
-  safirni, 
+  safirni,
+  real_estate,
   threeJsWeb,
   my_portfolio,
   link,
   work_video,
   JS_certification,
   hasoub_certification,
-  udacity_certification,React_certification
+  udacity_certification,
+  React_certification,
 };
