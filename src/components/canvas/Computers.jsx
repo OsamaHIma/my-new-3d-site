@@ -93,7 +93,7 @@ const ComputersCanvas = () => {
       className="cursor-grab active:cursor-grabbing"
       // style={{ translateY: `${window.scrollY}px`, position: "absolute" }}
       onError={(error) => {
-        console.error(,'err',error)
+        console.error('err',error)
       }}
     >
       <Suspense fallback={<CanvasLoader />}>
