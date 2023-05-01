@@ -91,7 +91,10 @@ const ComputersCanvas = () => {
       camera={{ position: [20, 3, 5], fov: 25 }}
       gl={{ preserveDrawingBuffer: true }}
       className="cursor-grab active:cursor-grabbing"
-      style={{ translateY: `${window.scrollY}px`, position: "absolute" }}
+      // style={{ translateY: `${window.scrollY}px`, position: "absolute" }}
+      onError={(error) => {
+        console.error(,'err',error)
+      }}
     >
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls
