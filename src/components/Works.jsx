@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import React, { Suspense } from "react";
 import { SectionWrapper } from "../hoc";
 import { styles } from "../styles";
 import { projects } from "../constants";
