@@ -10,7 +10,21 @@ import {
   StarsCanvas,
 } from "./components";
 import { ToastContainer } from "react-toastify";
+import { useThree } from "@react-three/fiber";
+
 const App = () => {
+  const { gl } = useThree();
+
+  gl.domElement.addEventListener(
+    "webglcontextlost",
+    (event) => {
+      event.preventDefault();
+      setTimeout(function () {
+        renderer.forceContextRestore();
+      }, 1);
+    },
+    false
+  );
 
   return (
     <BrowserRouter>
