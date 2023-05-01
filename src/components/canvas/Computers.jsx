@@ -1,12 +1,26 @@
 import { Suspense, useEffect, useState } from "react";
-import { Canvas } from "@react-three/fiber";
+import { Canvas, useThree } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 import CanvasLoader from "../Loader";
 import * as THREE from "three";
 import { work_video } from "../../assets";
 import { toast } from "react-toastify";
+// import { useThree } from "react-three-fiber";
 
 const Computers = ({ isMobile }) => {
+  const { gl } = useThree();
+
+  gl.domElement.addEventListener(
+    "webglcontextlost",
+    (event) => {
+      event.preventDefault();
+      setTimeout(function () {
+        renderer.forceContextRestore();
+      }, 1);
+    },
+    false
+  );
+
   const computer = useGLTF("./desktop_pc/PC.gltf");
   const screen =
     computer.scene.children[0].children[0].children[0].children[142]
@@ -83,7 +97,7 @@ const ComputersCanvas = () => {
       mediaQuery.removeEventListener("change", handelChanges);
     };
   }, []);
-  
+
   return (
     <Canvas
       frameloop="demand"
@@ -94,7 +108,7 @@ const ComputersCanvas = () => {
       className="cursor-grab active:cursor-grabbing"
       // style={{ translateY: `${window.scrollY}px`, position: "absolute" }}
       onError={(error) => {
-        console.error('err',error)
+        console.error("err", error);
       }}
     >
       <Suspense fallback={<CanvasLoader />}>

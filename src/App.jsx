@@ -12,18 +12,6 @@ import {
 import { ToastContainer } from "react-toastify";
 const App = () => {
 
-
-  renderer.domElement.addEventListener(
-    "webglcontextlost",
-    function (event) {
-      event.preventDefault();
-      setTimeout(function () {
-        renderer.forceContextRestore();
-      }, 1);
-    },
-    false
-  );
-
   return (
     <BrowserRouter>
       <div className="relative z-0 bg-primary">
