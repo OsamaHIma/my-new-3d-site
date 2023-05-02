@@ -6,7 +6,7 @@ import { github, link } from "../assets";
 import { fadeIn, textVariant } from "../utils/motion";
 import Tilt from "react-parallax-tilt";
 
-const Works = () => {
+const Work = () => {
   const ProjectCard = ({
     index,
     name,
@@ -103,4 +103,4 @@ const Works = () => {
   );
 };
 
-export default SectionWrapper(Works, "projects");
+export default SectionWrapper(Work, "projects");

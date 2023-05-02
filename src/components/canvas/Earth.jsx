@@ -35,7 +35,7 @@ const EarthCanvas = () => {
         <Earth />
       </Suspense>
 
-      {/* <Preload all /> */}
+      <Preload all />
     </Canvas>
   );
 };

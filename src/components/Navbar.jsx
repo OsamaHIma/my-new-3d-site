@@ -62,7 +62,7 @@ const Navbar = () => {
           ))}
           <li>
             <a
-              href="https://drive.google.com/file/d/1NM5cC8ku8zc40qAGfwXBb757xQmBLRxI/view?usp=share_link"
+              href="https://drive.google.com/file/d/1TrxZ3NiMauygHNf_jcwppIcxkJvQIaXn/view?usp=share_link"
               target="_blank"
               type="button"
               className="py-3 bg-[#6f47c5] px-8 outline-none w-fit text-white font-bold shadow-md shadow-primary rounded-xl"
@@ -102,7 +102,7 @@ const Navbar = () => {
               ))}
               <li>
                 <a
-                  href="https://drive.google.com/file/d/1NM5cC8ku8zc40qAGfwXBb757xQmBLRxI/view?usp=share_link"
+                  href="https://drive.google.com/file/d/1TrxZ3NiMauygHNf_jcwppIcxkJvQIaXn/view?usp=share_link"
                   target="_blank"
                   type="button"
                   className="py-3 bg-tertiary px-8 outline-none w-fit text-white font-bold shadow-md shadow-primary rounded-xl"

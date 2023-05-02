@@ -6,14 +6,12 @@ import {
   Hero,
   Navbar,
   Tech,
-  Works,
+  Work,
   StarsCanvas,
 } from "./components";
 import { ToastContainer } from "react-toastify";
 
 const App = () => {
-  
-
   return (
     <BrowserRouter>
       <div className="relative z-0 bg-primary">
@@ -33,7 +31,7 @@ const App = () => {
           <About />
           <Experience />
           <Tech />
-          <Works />
+          <Work />
         </main>
         <div className="relative z-0">
           <Contact />
