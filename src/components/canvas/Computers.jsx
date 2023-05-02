@@ -1,11 +1,10 @@
 import { Suspense, useEffect, useState } from "react";
-import { Canvas } from "@react-three/fiber";
+import { Canvas, } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 import CanvasLoader from "../Loader";
 import * as THREE from "three";
 import { work_video } from "../../assets";
 import { toast } from "react-toastify";
-// import { useThree } from "react-three-fiber";
 
 const Computers = ({ isMobile }) => {
 
@@ -89,12 +88,10 @@ const ComputersCanvas = () => {
   return (
     <Canvas
       frameloop="demand"
-      // shadows
       dpr={[1, 2]}
       camera={{ position: [20, 3, 5], fov: 25 }}
-      gl={{ preserveDrawingBuffer: true }}
+      gl={{ preserveDrawingBuffer: true, canvas:"#canvas"}}
       className="cursor-grab active:cursor-grabbing"
-      // style={{ translateY: `${window.scrollY}px`, position: "absolute" }}
       onError={(error) => {
         console.error("err", error);
       }}
