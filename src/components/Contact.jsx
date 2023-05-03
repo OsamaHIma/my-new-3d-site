@@ -16,6 +16,8 @@ const Contact = () => {
     message: "",
   });
   const [loading, setLoading] = useState(false);
+  const [validated, setValidated] = useState("");
+
   const handelChange = (e) => {
     const { name, value } = e.target;
     setForm({ ...Form, [name]: value });
@@ -23,6 +25,16 @@ const Contact = () => {
   const handelSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
+    if (!e.target.checkValidity()) {
+      e.preventDefault();
+      e.stopPropagation();
+      setValidated("not-validated");
+      toast.error("Please fill in all fields or enter a valid email address.");
+      setLoading(false);
+      return;
+    }
+
+    setValidated("validated");
 
     emailjs
       .send(
@@ -51,6 +63,7 @@ const Contact = () => {
               autoClose: 5700,
             }
           );
+          setValidated("");
           setForm({ name: "", email: "", message: "" });
           document
             .querySelectorAll("input")
@@ -87,8 +100,9 @@ const Contact = () => {
         <h3 className={`${styles.sectionHeadText}`}>Contact.</h3>
         <form
           ref={formRef}
-          className="flex flex-col gap-8 mt-12"
+          className={`flex flex-col gap-8 mt-12 ${validated}`}
           onSubmit={handelSubmit}
+          noValidate
         >
           <label className="flex flex-col">
             <span className="text-white font-medium mb-4">Your Name:</span>
@@ -97,6 +111,8 @@ const Contact = () => {
               name="name"
               required
               minLength={4}
+              autoCapitalize="on"
+              autoComplete="on"
               onChange={handelChange}
               placeholder="relax and try to remember"
               className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
@@ -105,10 +121,11 @@ const Contact = () => {
           <label className="flex flex-col">
             <span className="text-white font-medium mb-4">Your Email:</span>
             <input
-              type="text"
+              type="email"
               name="email"
               required
               onChange={handelChange}
+              autoComplete="on"
               placeholder="Whats's your email?"
               className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
             />
